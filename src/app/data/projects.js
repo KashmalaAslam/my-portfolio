@@ -1,29 +1,3 @@
-/**
- * Single source of truth for the project cards on the home page AND the
- * case-study pages at /projects/[slug].
- *
- * To add a project: add an object below and (optionally) drop its images in /public/images.
- *
- * Fields
- * ------
- * slug         URL part, e.g. "campus-bite" -> /projects/campus-bite
- * title        Project name
- * category     Short label shown on the card
- * summary      One or two sentences shown at the top of the case study
- * cover        { src, width, height, alt } main image (card + case-study header)
- * role         What you personally did
- * tools        Array of tools/technologies
- * type         e.g. "Web app", "Mobile app concept"
- * overview     Array of paragraphs
- * highlights   Array of short bullet points (what was built / designed)
- * process      OPTIONAL array of { title, text } steps - section is hidden when empty
- * outcome      OPTIONAL array of paragraphs - section is hidden when empty
- * screenshots  OPTIONAL array of { src, width, height, alt, caption } - gallery is hidden when empty
- * links        Array of { label, href } (live site, Figma, GitHub ...)
- *
- * Only write things that are true. Recruiters check.
- */
-
 export const projects = [
   {
     slug: "devboard",
@@ -50,11 +24,35 @@ export const projects = [
       "Dashboard cards for productivity, completed tasks, time tracked and recent projects",
       "Marketing landing page with feature, workflow and sign-up sections",
     ],
-    process: [], // TODO: add steps, e.g. { title: "Research", text: "..." }
-    outcome: [], // TODO: add what you learned / results
-    screenshots: [], // TODO: add real screenshots, e.g. { src: "/images/devboard/tasks.png", width: 1440, height: 900, alt: "...", caption: "Tasks view" }
+    process: [
+      {
+        title: "Planning & Structure",
+        text: "Defined the core dashboard sections and organized the information architecture around projects, tasks, deadlines and productivity metrics.",
+      },
+      {
+        title: "UI Design",
+        text: "Focused on a clean dashboard layout with clear visual hierarchy, consistent spacing and reusable interface patterns to make information easy to scan.",
+      },
+      {
+        title: "Frontend Development",
+        text: "Translated the interface into reusable React components using Next.js and Tailwind CSS, building responsive layouts for desktop and mobile screens.",
+      },
+      {
+        title: "Refinement",
+        text: "Refined navigation, component consistency and responsive behaviour to create a cohesive experience across the dashboard and marketing pages.",
+      },
+    ],
+    outcome: [
+      "Developed a responsive project management dashboard with dedicated sections for tasks, projects, calendars and productivity insights.",
+      "Created reusable frontend components to maintain consistency and simplify future updates.",
+      "Strengthened my ability to translate UI designs into functional, responsive web interfaces.",
+    ],
+    screenshots: [],
     links: [
-      { label: "View live site", href: "https://devboard-gamma-five.vercel.app/" },
+      {
+        label: "View live site",
+        href: "https://devboard-gamma-five.vercel.app/",
+      },
     ],
   },
   {
@@ -82,9 +80,30 @@ export const projects = [
       "Simple bottom navigation: Home, Orders, Favorites and Profile",
       "Warm green and orange colour palette with a custom illustrated look",
     ],
-    process: [], // TODO: who is it for, what problem it solves, how you decided on the flow
-    outcome: [], // TODO: e.g. feedback from classmates, what you would improve
-    screenshots: [], // TODO: export 3-5 key screens from Figma as PNG and list them here
+    process: [
+      {
+        title: "Problem Identification",
+        text: "Explored the common inconvenience of waiting in cafeteria queues and considered how a simple pre-ordering experience could make campus dining easier.",
+      },
+      {
+        title: "User Flow",
+        text: "Outlined a straightforward journey from onboarding to browsing food categories and discovering popular cafeteria items.",
+      },
+      {
+        title: "Visual Direction",
+        text: "Selected a warm green and orange palette with friendly illustrations to give the app an approachable and student-friendly personality.",
+      },
+      {
+        title: "Interface Design",
+        text: "Designed the onboarding, home and food discovery screens in Figma, maintaining consistent components, spacing and bottom navigation.",
+      },
+    ],
+    outcome: [
+      "Created a mobile app concept that demonstrates the core experience of campus food discovery and pre-ordering.",
+      "Established a consistent visual direction across the initial app screens.",
+      "Improved my understanding of mobile interface patterns, user flows and visual hierarchy.",
+    ],
+    screenshots: [],
     links: [
       {
         label: "View Figma file",
@@ -117,9 +136,30 @@ export const projects = [
       "Header designed with search, wishlist, cart and profile shortcuts",
       "Responsive layout designed for both desktop and mobile",
     ],
-    process: [], // TODO: team size, your exact tasks, how the AI feature works
-    outcome: [], // TODO: grade/feedback, what you learned
-    screenshots: [], // TODO: real screenshots of the running site
+    process: [
+      {
+        title: "Project Planning",
+        text: "Worked as part of a final-year project team to develop an AI-driven e-commerce platform, with the storefront designed around product discovery and online shopping.",
+      },
+      {
+        title: "Interface Design",
+        text: "Contributed to the storefront's visual structure, focusing on product presentation, navigation, promotional sections and shopping-related interactions.",
+      },
+      {
+        title: "Frontend Development",
+        text: "Contributed to implementing the frontend using Next.js, translating interface requirements into responsive page layouts and reusable UI elements.",
+      },
+      {
+        title: "Integration",
+        text: "Worked within the broader project structure, where the frontend was developed alongside a Flask-based Python backend.",
+      },
+    ],
+    outcome: [
+      "Contributed to the development of an AI-driven e-commerce platform as my undergraduate final-year project.",
+      "Gained practical experience working within a team-based software development project.",
+      "Developed a better understanding of frontend and backend integration in a full-stack application.",
+    ],
+    screenshots: [],
     links: [], // TODO: add live link / GitHub if available
   },
   {
@@ -129,7 +169,7 @@ export const projects = [
     summary:
       "Social media posts, posters and short video content created to build the digital presence of a Quran academy.",
     cover: {
-      src: "/images/04.png",
+      src: "/images/06.png",
       width: 759,
       height: 1024,
       alt: "Collection of Al-Khalid Quran Academy social media designs",
@@ -147,9 +187,59 @@ export const projects = [
       "Event poster with clear registration steps",
       "Short-form promotional video with simple motion and audio sync",
     ],
-    process: [],
-    outcome: [], // TODO: add real results only if you have them (followers, registrations, feedback)
-    screenshots: [], // TODO: add individual posts / a video link
+    process: [
+      {
+        title: "Understanding the Brand",
+        text: "Identified the academy's communication needs and aimed to create a welcoming, consistent visual identity for its digital platforms.",
+      },
+      {
+        title: "Visual Direction",
+        text: "Used a coordinated colour palette, typography and graphic elements to maintain a recognizable style across different promotional materials.",
+      },
+      {
+        title: "Content Creation",
+        text: "Designed course announcements, registration graphics, promotional posters and event-related visuals using Canva.",
+      },
+      {
+        title: "Video Editing",
+        text: "Created short promotional video content using CapCut and InShot, combining visual elements, transitions and audio to communicate information clearly.",
+      },
+    ],
+    outcome: [
+      "Delivered a collection of social media graphics and promotional materials for the academy.",
+      "Created visual content for course announcements, registrations and special events.",
+      "Expanded my practical experience in visual communication, social media design and short-form video editing.",
+    ],
+    screenshots: [
+      {
+        src: "/images/course_flyer.png",
+        width: 1080,
+        height: 1350,
+        alt: "Quran course announcement social media design",
+        caption: "Course Announcement",
+      },
+      {
+        src: "/images/hadith-course.png",
+        width: 1080,
+        height: 1350,
+        alt: "Academy weekly hadith session",
+        caption: "Hadith Session",
+      },
+      {
+        src: "/images/18.png",
+        width: 1080,
+        height: 1350,
+        alt: "Painting competition promotional poster",
+        caption: "Event Poster",
+      },
+      {
+        src: "/images/session-flyer.png",
+        width: 1080,
+        height: 1350,
+        alt: "Hadith Session Slides",
+        caption: "Session Poster",
+      },
+    ],
     links: [],
   },
 ];
@@ -158,7 +248,6 @@ export function getProject(slug) {
   return projects.find((project) => project.slug === slug);
 }
 
-/** Returns the previous and next project (wraps around) for the footer navigation. */
 export function getAdjacentProjects(slug) {
   const index = projects.findIndex((project) => project.slug === slug);
   if (index === -1) return { previous: null, next: null };

@@ -4,7 +4,7 @@ const experiences = [
   {
     role: "Teaching Assistant",
     company: "National Textile University",
-    date: "2024",
+    date: "Oct 2023, Jan 2024",
     type: "Academic",
     description:
       "Assisted students in Programming Fundamentals and C++, strengthening their understanding of core programming concepts.",
@@ -13,7 +13,7 @@ const experiences = [
   {
     role: "MERN Stack Developer",
     company: "Cyverix",
-    date: "2024 – 2025",
+    date: "Jun 2024 – Sep 2024",
     type: "Development",
     description:
       "Gained practical experience with modern web development and MERN stack technologies.",
@@ -22,7 +22,7 @@ const experiences = [
   {
     role: "Frontend Web Developer",
     company: "KaiRiz",
-    date: "2025",
+    date: "Jun 2023 - Sep 2023",
     type: "Development",
     description:
       "Worked on frontend development, translating ideas into responsive and functional web interfaces.",
@@ -49,7 +49,7 @@ const experiences = [
   {
     role: "Data Fellow",
     company: "DataCamp Donates",
-    date: "11 Jul – 11 Nov 2026",
+    date: "11 Jul – 11 Oct 2026",
     type: "Fellowship",
     description:
       "Selected for a fellowship involving data learning, practical projects and collaborative capstone work.",
